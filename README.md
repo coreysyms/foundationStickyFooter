@@ -7,4 +7,4 @@ The stiky footer will remember your original styles if the page is not long enou
 There are no requirements for CSS!
 You don't even need a fixed height, or a wrapper!
 
-It even works in mobile! Go on, check it out the demo!
+It even works in mobile! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/
