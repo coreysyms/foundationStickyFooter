@@ -8,3 +8,8 @@ There are no requirements for CSS! No 100% Body Height!
 You don't even need a fixed height, or a wrapper!
 
 It even works in mobile! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/
+
+FAQ as they come up.
+=====================
+Q: Do I need to apply 100% height to my body?
+A: No, Do not apply 100% height to your body, this will cause the plug in to not work.
