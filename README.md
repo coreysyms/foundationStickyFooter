@@ -14,7 +14,7 @@ FAQ's as they come up.
 Q: Do I need to apply 100% height to my body?
 
 A: No, Do not apply 100% height to your body, this will cause the plug in to not work.
----
+
 Q: How do I span the full width of the browser with my footer in Foundation?
 
 A: If you would like to have your footer span the full width of the browser, apply a style to the footer.
