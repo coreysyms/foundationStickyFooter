@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Sticky Footer Example With Foundation</title>
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <!--
+  <link rel="stylesheet" href="foundation.css">
+  -->
+  
+  <!-- Included CSS Files (Compressed) -->
+  <link rel="stylesheet" href="foundation.min.css">
+  <link rel="stylesheet" href="app.css">
+
+  <script src="modernizr.foundation.js"></script>
+  
+</head>
+<body>
+  
+  <!-- Header and Nav -->
+  <div class="row">
+    <div class="three columns">
+      <h1><img src="http://placehold.it/400x100&text=Logo" /></h1>
+    </div>
+    <div class="nine columns">
+      <ul class="nav-bar right">
+        <li><a href="#">Nav</a></li>
+        <li><a href="#">Nav</a></li>
+        <li><a href="#">Nav</a></li>
+        <li><a href="#">Nav</a></li>
+        <li><a href="#">Nav</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- End Header and Nav -->
+  
+  
+  <!-- Two-up Content Blocks -->
+  
+  <div class="row">
+  
+    <div class="five columns">
+      <h4>Sticky Footer.</h4>
+      <p>The Sticky footer will use the <b>&lt;footer&gt;</b> tag and make it "stick" to the bottom of the page. </p><p>You may pre-style the <b>&lt;footer&gt;</b> in your css file. The stiky footer will remember your original styles if the page is not long enough to "stick" to the bottom of the page! Even after resize! </p><p>There are no requirements for CSS! You don't even need a fixed height, or a wrapper!</p>
+      <p>It even works in mobile! Go on, check it out!</p>
+      <p><a href="../sticky_footer.zip" target="_blank">Download The Files!</a></p>
+    </div>
+    
+    <div class="seven columns">
+      <h4>Right Side.</h4>
+      <p><input type="text" value="Name" class="six"></p>
+      <p><input type="text" value="Email" class="six"></p>
+      <p><input type="text" value="Phone" class="six"></p>
+      <p><textarea style="height:100px;">Message</textarea></p>
+      <p><input type="submit" class="button radius"></p>
+    </div>
+    
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+        <hr />
+        <div class="twelve columns">
+          <div class="row">
+            <div class="five columns">
+              <p><img src="http://placehold.it/50x50&text=logo" /></p>
+              <p>This is a Sticky Footer.<br />It will stick to the bottom of the page onload().<br />It will also re-stick after a window resize.</p>
+              <p>&copy; Copyright | <a href="#">Privacy Policy</a></p>
+            </div>
+            <div class="two columns">
+              <p><a href="#">Nav</a></p>
+              <p><a href="#">Nav</a></p>
+              <p><a href="#">Nav</a></p>
+              <p><a href="#">Nav</a></p>
+              <p><a href="#">Nav</a></p>
+            </div>
+            <div class="two columns">
+              <p><img src="http://placehold.it/25x25" align="absmiddle" /> Twitter</p>
+              <p><img src="http://placehold.it/25x25" align="absmiddle" /> Facebook</p>
+              <p><img src="http://placehold.it/25x25" align="absmiddle" /> Email</p>
+            </div>
+            <div class="three columns">
+              <p>Newsletter:</p>
+              <p><input type="text" value="Email Address"><input type="submit" class="button radius right"></p>
+            </div>
+          </div>
+        </div> 
+    </div>
+  </footer>
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  
+  <script src="javascripts/jquery.js"></script>
+  
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+  
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+  
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+  
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+  
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+  
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+  
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+  
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+  
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+  
+  <script src="javascripts/jquery.placeholder.js"></script>
+  
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+  
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+  
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+  
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+  
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="jquery.js"></script>
+  <script src="foundation.min.js"></script>
+  <script src="jquery.stickyFooter.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="app.js"></script>
+  
+</body>
+</html>
