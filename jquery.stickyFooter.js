@@ -11,12 +11,13 @@
  */
 
 $(window).load(function() {
-  stickyFooter();
+	stickyFooter();
+	setInterval(checkForDOMChange, 500);
 });
 
-$(window).resize(function () {
+function checkForDOMChange() {
 	stickyFooter();
-});
+}
 
 function stickyFooter() {
 	$("footer").removeAttr('style');	
@@ -31,41 +32,4 @@ function stickyFooter() {
 }
 /*
 ! end sticky footer
-*/
-
-
-/*
-
-If you want to delay the window resize event
-
-$(window).load(function() {
-	stickyFooter();
-});
-
-$(window).resize(function () {
-	delay(function() { 
-		stickyFooter();
-	}, 500);
-});
-
-var delay = (function(){
-	var timer = 0;
-	return function(callback, ms) {
-		clearTimeout (timer);
-		timer = setTimeout(callback, ms);
-	};
-})();
-
-function stickyFooter() {
-	$("footer").removeAttr('style');	
-	if (window.innerHeight != document.body.offsetHeight) {
-		var offset = window.innerHeight - document.body.offsetHeight;
-		var current = parseInt($("footer").css("margin-top"));
-		
-		if (current+offset > parseInt($("footer").css("margin-top"))) {
-			$("footer").css({"margin-top":(current+offset)+"px"});
-		}
-	}
-}
-
 */
