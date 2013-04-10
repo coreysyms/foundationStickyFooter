@@ -12,10 +12,18 @@
 
 $(window).load(function() {
 	stickyFooter();
-	setInterval(checkForDOMChange, 500);
+  
+	//IE does not support mutation events so old skool here
+	if ($.browser.msie) {
+		setInterval(checkForDOMChange, 100);
+	}
 });
 
+//check for changes to the DOM
 function checkForDOMChange() {
+	if (!$.browser.msie) {
+		$(document).unbind("DOMSubtreeModified");
+	}
 	stickyFooter();
 }
 
@@ -28,6 +36,10 @@ function stickyFooter() {
 		if (current+offset > parseInt($("footer").css("margin-top"))) {
 			$("footer").css({"margin-top":(current+offset)+"px"});
 		}
+	}
+	
+	if (!$.browser.msie) {
+		$(document).bind("DOMSubtreeModified", checkForDOMChange);
 	}
 }
 /*
