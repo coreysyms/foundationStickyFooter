@@ -1,4 +1,4 @@
-foundationStickyFooter For Foundation
+foundationStickyFooter For Foundation 3 and up
 ======================
 The Sticky footer will use the HTML5 tag < footer > and make it "stick" to the bottom of the page.
 Simply add in < footer ></ footer > to your webpage with your desired styled content inside the < footer > tag.
