@@ -27,6 +27,13 @@ function checkForDOMChange() {
 	stickyFooter();
 }
 
+//check for resize event if not IE
+if (!$.browser.msie) {
+	$(window).resize(function() {
+		stickyFooter();
+	});
+}
+
 function stickyFooter() {
 	$("footer").removeAttr('style');	
 	if (window.innerHeight != document.body.offsetHeight) {
