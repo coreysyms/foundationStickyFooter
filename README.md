@@ -20,3 +20,7 @@ Q: How do I span the full width of the browser with my footer in Foundation?
 A: If you would like to have your footer span the full width of the browser, apply a style to the footer.
 < footer style="background-color:red" >
 This will give you a full width bar with a background color of red.
+
+Q: Will this work with out Foundation?
+
+A: Yes! This sticky footer will work with out Foundation. I build it with Foundation in mind cause that is what I use.
