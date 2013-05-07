@@ -2,6 +2,7 @@
  * jQuery Sticky Footer 1.1
  * Corey Snyder
  * http://tangerineindustries.com
+ * https://github.com/coreysyms/foundationStickyFooter
  *
  * Released under the MIT license
  *
