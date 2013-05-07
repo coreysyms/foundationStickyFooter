@@ -30,7 +30,7 @@ function checkForDOMChange() {
 }
 
 //check for resize event if not IE 9 or greater
-if (!jQuery.support.leadingWhitespace) {
+if (jQuery.support.leadingWhitespace) {
 	$(window).resize(function() {
 		stickyFooter();
 	});
@@ -47,7 +47,7 @@ function stickyFooter() {
 		}
 	}
 	
-	if (!jQuery.support.leadingWhitespace) {
+	if (jQuery.support.leadingWhitespace) {
 		$(document).bind("DOMSubtreeModified", checkForDOMChange);
 	}
 }
@@ -55,3 +55,4 @@ function stickyFooter() {
 /*
 ! end sticky footer
 */
+
