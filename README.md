@@ -24,3 +24,20 @@ This will give you a full width bar with a background color of red.
 Q: Will this work with out Foundation?
 
 A: Yes! This sticky footer will work with out Foundation. I build it with Foundation in mind cause that is what I use.
+
+Q: How do I install this for Foundation 4?
+
+A: Your scripts should load like this, as you can see I moved the location of the jquery.stickyfooter.js file to the js/vendor/ directory to reflect the location of the "helper" script... see... ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') how this script is looking for any jquery files in js/vendor.
+```
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script src="js/vendor/jquery.stickyfooter.js"></script>
+  ```
+  
+Your file locations may be a little different so make you paths reflect that.
