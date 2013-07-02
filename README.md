@@ -37,7 +37,7 @@ A: Your scripts should load like this, as you can see I moved the location of th
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
-  <script src="js/vendor/jquery.stickyfooter.js"></script>
+  <script src="js/vendor/jquery.stickyFooter.js"></script>
   ```
   
 Your file locations may be a little different so make you paths reflect that.
