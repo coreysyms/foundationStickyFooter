@@ -38,7 +38,11 @@ if (jQuery.support.leadingWhitespace) {
 }
 
 function stickyFooter() {
-	$("footer").removeAttr('style');	
+
+	if ($("footer").attr('style')) {
+		$("footer").removeAttr('style');
+	}
+
 	if (window.innerHeight != document.body.offsetHeight) {
 		var offset = window.innerHeight - document.body.offsetHeight;
 		var current = parseInt($("footer").css("margin-top"));
