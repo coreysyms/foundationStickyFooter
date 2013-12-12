@@ -9,7 +9,7 @@ You don't even need a fixed height, or a wrapper!
 
 It even works in mobile and tablet! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/
 
-<b>With the recent changes to Foundation I have put together a non-jQuery stickyFooter, check it out here. http://www.tangerineindustries.com/download/sticky_footer_no_jQuery/
+<b>With the recent changes to Foundation I have put together a non-jQuery stickyFooter, check it out here. http://www.tangerineindustries.com/download/sticky_footer_no_jQuery/stickyFooter.js
 It is a little quirky in IE8, but have tested with success in IE9, 10, chrome, FF, and safari.</b>
 
 FAQ's as they come up.
