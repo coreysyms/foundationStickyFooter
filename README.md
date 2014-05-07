@@ -9,8 +9,7 @@ You don't even need a fixed height, or a wrapper!
 
 It even works in mobile and tablet! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/
 
-<b>With the recent changes to Foundation I have put together a non-jQuery stickyFooter, check it out here. http://www.tangerineindustries.com/download/sticky_footer_no_jQuery/stickyFooter.js
-It is a little quirky in IE8, but have tested with success in IE9, 10, chrome, FF, and safari.</b>
+<b>With the recent changes to Foundation I have put together a non-jQuery stickyFooter. The code changes have been reflected in the git files. It is a little quirky in IE8, but have tested with success in IE9, 10, 11, chrome, FF, and safari.</b>
 
 FAQ's as they come up.
 =====================
@@ -40,7 +39,10 @@ A: Your scripts should load like this, as you can see I moved the location of th
 
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
-  <script src="js/vendor/jquery.stickyFooter.js"></script>
+  <script src="js/vendor/stickyFooter.js"></script>
   ```
   
 Your file locations may be a little different so make you paths reflect that.
+
+Q: What about Foundation 5? 
+A: It works great! and its easy to install too, no more Zepto!
