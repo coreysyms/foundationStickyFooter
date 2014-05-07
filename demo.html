@@ -26,6 +26,16 @@
   
 </head>
 <body>
+
+<div class="alert-box">
+  This is a standard alert (div.alert-box).
+  <a href="" class="close">&times;</a>
+</div>
+
+<div class="alert-box">
+  This is a standard alert (div.alert-box).
+  <a href="" class="close">&times;</a>
+</div>
   
   <!-- Header and Nav -->
   <div class="row">
@@ -52,7 +62,8 @@
     <div class="five columns">
       <h4>Sticky Footer.</h4>
       <p>The Sticky footer will use the <b>&lt;footer&gt;</b> tag and make it "stick" to the bottom of the page. </p><p>You may pre-style the <b>&lt;footer&gt;</b> in your css file. The stiky footer will remember your original styles if the page is not long enough to "stick" to the bottom of the page! Even after resize! </p><p>There are no requirements for CSS! You don't even need a fixed height, or a wrapper!</p>
-      <p>It even works in mobile! Go on, check it out by scaling your browser or opening on a mobile device!</p>
+      <p>It even works in mobile! Go on, check it out!</p>
+      <p><a href="../sticky_footer.zip" target="_blank">Download The Files!</a></p>
     </div>
     
     <div class="seven columns">
@@ -67,14 +78,14 @@
   </div>
   
   <!-- Footer -->
-  <footer>
+  <footer style="background-color:#F9900;">
     <div class="row">
         <hr />
         <div class="twelve columns">
           <div class="row">
             <div class="five columns">
               <p><img src="http://placehold.it/50x50&text=logo" /></p>
-              <p>This is a Sticky Footer.<br />It will stick to the bottom of the page onload().<br />It will also re-stick after a window resize or DOM change event.</p>
+              <p>This is a Sticky Footer.<br />It will stick to the bottom of the page onload().<br />It will also re-stick after a window resize.</p>
               <p>&copy; Copyright | <a href="#">Privacy Policy</a></p>
             </div>
             <div class="two columns">
@@ -138,7 +149,7 @@
   <!-- Included JS Files (Compressed) -->
   <script src="jquery.js"></script>
   <script src="foundation.min.js"></script>
-  <script src="jquery.stickyFooter.js"></script>
+  <script src="stickyFooter.js"></script>
   
   <!-- Initialize JS Plugins -->
   <script src="app.js"></script>
