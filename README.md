@@ -29,7 +29,7 @@ A: Yes! This sticky footer will work with out Foundation. I build it with Founda
 
 Q: How do I install this for Foundation 4?
 
-A: Your scripts should load like this, as you can see I moved the location of the jquery.stickyfooter.js file to the js/vendor/ directory to reflect the location of the "helper" script... see... ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') how this script is looking for any jquery files in js/vendor.
+A: Your scripts should load like this, as you can see I moved the location of the stickyfooter.js file to the js/vendor/ directory to reflect the location of the "helper" script... see... ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') how this script is looking for any jquery files in js/vendor.
 ```
   <script>
   document.write('<script src=' +
@@ -40,9 +40,10 @@ A: Your scripts should load like this, as you can see I moved the location of th
   <script src="js/vendor/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
   <script src="js/vendor/stickyFooter.js"></script>
-  ```
+```
   
 Your file locations may be a little different so make you paths reflect that.
 
 Q: What about Foundation 5? 
+
 A: It works great! and its easy to install too, no more Zepto!
