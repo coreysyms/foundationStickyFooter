@@ -23,11 +23,11 @@ window.onload = function() {
 var target = document.body;
  
 // create an observer instance
-var observer = new MutationObserver(function(mutations) {
-  mutations.forEach(function(mutation) {
+var observer = new MutationObserver(mutationObjectCallback);
+function mutationObjectCallback(mutationRecordsList) {
+	
     stickyFooter();
-  });    
-});
+};
  
 // configuration of the observer:
 var config = { attributes: true, childList: true, characterData: true };
@@ -56,30 +56,10 @@ function getCSS(element, property) {
 
 }
 
-//lets see if the height of the html / body is 100%;
-function getStyleSheetPropertyValue(selectorText, propertyName) {
-    // search backwards because the last match is more likely the right one
-    for (var s= document.styleSheets.length - 1; s >= 0; s--) {
-        var cssRules = document.styleSheets[s].cssRules || document.styleSheets[s].rules || []; // IE support
-        
-		for (var c=0; c < cssRules.length; c++) {
-            if (cssRules[c].selectorText === selectorText) 
-                return cssRules[c].style[propertyName];
-        }
-    }
-    return null;
-}
-
 function stickyFooter() {
-	
 	observer.disconnect();
-	var resetHTML = false;
-	if (getStyleSheetPropertyValue("html, body", "height") === "100%" || getStyleSheetPropertyValue("body", "height") === "100%" || getStyleSheetPropertyValue("html", "height") === "100%") {
-		document.body.setAttribute("style","height:auto");
-		resetHTML = true;	
-	}
-	
-
+	document.body.setAttribute("style","height:auto");
+			
 	if (document.getElementsByTagName("footer")[0].getAttribute("style") != null) {
 		document.getElementsByTagName("footer")[0].removeAttribute("style");
 	}
@@ -100,9 +80,7 @@ function stickyFooter() {
 		}
 	}
 	
-	if (resetHTML === true) {
-		document.body.setAttribute("style","height:100%");
-	}
+	document.body.setAttribute("style","height:100%");
 	
 	//reconnect
 	observer.observe(target, config);
