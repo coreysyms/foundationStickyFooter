@@ -9,7 +9,7 @@ You don't even need a fixed height, or a wrapper!
 
 It even works in mobile and tablet! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/
 
-<b>NOW COMPLETELY WORKS IN FOUNDATION 5 AND NEW DOM CHANGE EVENT LISTENERS!</b>
+<b>NOW COMPLETELY WORKS IN FOUNDATION 5 AND NEW DOM CHANGE EVENT LISTENERS! Also, my example uses an old instal of Foundation, but it does work in Foundation 5, I just couldn't figure out how to regigger my git files to reflect Foundations new file structure.</b>
 
 FAQ's as they come up.
 =====================
