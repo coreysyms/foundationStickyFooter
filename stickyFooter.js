@@ -79,8 +79,7 @@ function stickyFooter() {
 		resetHTML = true;	
 	}
 	
-	alert(getStyleSheetPropertyValue("html, body", "height"));
-		
+
 	if (document.getElementsByTagName("footer")[0].getAttribute("style") != null) {
 		document.getElementsByTagName("footer")[0].removeAttribute("style");
 	}
