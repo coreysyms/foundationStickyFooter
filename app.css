@@ -12,9 +12,12 @@
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+html,body {
+	height:100%;
+}
 
 footer {
-  background-color:#efefef;
+ background-color:#efefef;
 }
 
 /* -----------------------------------------
