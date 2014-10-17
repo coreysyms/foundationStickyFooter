@@ -1,5 +1,5 @@
 /*!
- * jQuery Sticky Footer 1.1
+ * jQuery Sticky Footer 2.0
  * Corey Snyder
  * http://tangerineindustries.com
  *
@@ -10,22 +10,30 @@
  * Date: Thu Jan 22 2013 13:34:00 GMT-0630 (Eastern Daylight Time)
  * Modification for jquery 1.9+ Tue May 7 2013
  * Modification for non-jquery, removed all, now classic JS Wed Jun 12 2013
+ * Modification for Foundation 5 auto height issues
+ * Modification for new DOM change event listener
  */
 
 window.onload = function() {
 	stickyFooter();
-	
-	//you can either uncomment and allow the setInterval to auto correct the footer
-	//or call stickyFooter() if you have major DOM changes
-	//setInterval(checkForDOMChange, 1000);
+	observer.observe(target, config);
 };
 
 //check for changes to the DOM
-function checkForDOMChange() {
-	stickyFooter();
-}
+var target = document.body;
+ 
+// create an observer instance
+var observer = new MutationObserver(function(mutations) {
+  mutations.forEach(function(mutation) {
+    stickyFooter();
+  });    
+});
+ 
+// configuration of the observer:
+var config = { attributes: true, childList: true, characterData: true };
+ 
 
-//check for resize event if not IE 9 or greater
+//check for resize event
 window.onresize = function() {
 	stickyFooter();
 }
@@ -48,8 +56,31 @@ function getCSS(element, property) {
 
 }
 
+//lets see if the height of the html / body is 100%;
+function getStyleSheetPropertyValue(selectorText, propertyName) {
+    // search backwards because the last match is more likely the right one
+    for (var s= document.styleSheets.length - 1; s >= 0; s--) {
+        var cssRules = document.styleSheets[s].cssRules || document.styleSheets[s].rules || []; // IE support
+        
+		for (var c=0; c < cssRules.length; c++) {
+            if (cssRules[c].selectorText === selectorText) 
+                return cssRules[c].style[propertyName];
+        }
+    }
+    return null;
+}
+
 function stickyFooter() {
 	
+	observer.disconnect();
+	var resetHTML = false;
+	if (getStyleSheetPropertyValue("html, body", "height") === "100%" || getStyleSheetPropertyValue("body", "height") === "100%" || getStyleSheetPropertyValue("html", "height") === "100%") {
+		document.body.setAttribute("style","height:auto");
+		resetHTML = true;	
+	}
+	
+	alert(getStyleSheetPropertyValue("html, body", "height"));
+		
 	if (document.getElementsByTagName("footer")[0].getAttribute("style") != null) {
 		document.getElementsByTagName("footer")[0].removeAttribute("style");
 	}
@@ -69,6 +100,13 @@ function stickyFooter() {
 			document.getElementsByTagName("footer")[0].setAttribute("style","margin-top:"+(current+offset)+"px;");
 		}
 	}
+	
+	if (resetHTML === true) {
+		document.body.setAttribute("style","height:100%");
+	}
+	
+	//reconnect
+	observer.observe(target, config);
 }
 
 /*
