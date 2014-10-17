@@ -9,13 +9,13 @@ You don't even need a fixed height, or a wrapper!
 
 It even works in mobile and tablet! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/
 
-<b>With the recent changes to Foundation I have put together a non-jQuery stickyFooter. The code changes have been reflected in the git files. It is a little quirky in IE8, but have tested with success in IE9, 10, 11, chrome, FF, and safari.</b>
+<b>NOW COMPLETELY WORKS IN FOUNDATION 5 AND NEW DOM CHANGE EVENT LISTENERS!</b>
 
 FAQ's as they come up.
 =====================
 Q: Do I need to apply 100% height to my body?
 
-A: No, Do not apply 100% height to your body, this will cause the plug in to not work.
+A: This has been changed from don't to does not matter. New sticky footer will still work with height 100%
 
 Q: How do I span the full width of the browser with my footer in Foundation?
 
