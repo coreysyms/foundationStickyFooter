@@ -20,7 +20,7 @@ A: This has been changed from don't to does not matter. New sticky footer will s
 Q: How do I span the full width of the browser with my footer in Foundation?
 
 A: If you would like to have your footer span the full width of the browser, apply a style to the footer.
-< footer style="background-color:red" >
+footer { background-color:red; } 
 This will give you a full width bar with a background color of red.
 
 Q: Will this work with out Foundation?
@@ -47,3 +47,7 @@ Your file locations may be a little different so make you paths reflect that.
 Q: What about Foundation 5? 
 
 A: It works great! and its easy to install too, no more Zepto!
+
+
+HELPERS:
+Please DO NOT apply and classes to the footer IE < footer class="row" > If you would like your row content to respect the grid plase place the row and column(s) inside the < footer > tag. The stickyFooter will not work proprly if you class it with foundation's grid classes.
