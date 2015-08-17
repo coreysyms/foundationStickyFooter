@@ -30,7 +30,7 @@ function mutationObjectCallback(mutationRecordsList) {
 };
  
 // configuration of the observer:
-var config = { attributes: true, childList: true, characterData: true };
+var config = { attributes: true, childList: true, characterData: true, subtree:true };
  
 
 //check for resize event
