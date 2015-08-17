@@ -49,5 +49,6 @@ Q: What about Foundation 5?
 A: It works great! and its easy to install too, no more Zepto!
 
 
-HELPERS:
-Please DO NOT apply and classes to the footer IE < footer class="row" > If you would like your row content to respect the grid plase place the row and column(s) inside the < footer > tag. The stickyFooter will not work proprly if you class it with foundation's grid classes.
+<b>HELPERS:<b>
+
+Please DO NOT apply any classes to the footer IE < footer class="row" > If you would like your row content to respect the grid plase place the row and column(s) inside the < footer > tag. The stickyFooter will not work proprly if you class it with foundation's grid classes.
