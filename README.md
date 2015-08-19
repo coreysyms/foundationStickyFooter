@@ -7,7 +7,7 @@ The stiky footer will remember your original styles if the page is not long enou
 There are no requirements for CSS! No 100% Body Height!
 You don't even need a fixed height, or a wrapper!
 
-It even works in mobile and tablet! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/
+It even works in mobile and tablet! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/index.html
 
 <b>NOW COMPLETELY WORKS IN FOUNDATION 5 AND NEW DOM CHANGE EVENT LISTENERS! Also, my example uses an old instal of Foundation, but it does work in Foundation 5, I just couldn't figure out how to regigger my git files to reflect Foundations new file structure.</b>
 
