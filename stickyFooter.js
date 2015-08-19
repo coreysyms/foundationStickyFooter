@@ -1,5 +1,5 @@
 /*!
- * jQuery Sticky Footer 2.0
+ * jQuery Sticky Footer 2.1
  * Corey Snyder
  * http://tangerineindustries.com
  *
@@ -12,26 +12,44 @@
  * Modification for non-jquery, removed all, now classic JS Wed Jun 12 2013
  * Modification for Foundation 5 auto height issues
  * Modification for new DOM change event listener
+ * Modification for old IE mutation events, since not supported uses polling
  */
+
+var MutationObserver = (function () {
+	var prefixes = ['WebKit', 'Moz', 'O', 'Ms', '']
+		for (var i=0; i < prefixes.length; i++) {
+			if (prefixes[i] + 'MutationObserver' in window) {
+				 return window[prefixes[i] + 'MutationObserver'];
+			}
+		}
+		return false;
+}());
 
 window.onload = function() {
 	stickyFooter();
-	observer.observe(target, config);
+
+	if (MutationObserver) {
+  		observer.observe(target, config);
+	} else {
+		//old IE
+  		setInterval(stickyFooter, 500);
+	}
 };
 
 //check for changes to the DOM
 var target = document.body;
- 
-// create an observer instance
-var observer = new MutationObserver(mutationObjectCallback);
-function mutationObjectCallback(mutationRecordsList) {
-	
-    stickyFooter();
-};
- 
-// configuration of the observer:
+var observer;
 var config = { attributes: true, childList: true, characterData: true, subtree:true };
- 
+
+if (MutationObserver) {
+	// create an observer instance
+	observer = new MutationObserver(mutationObjectCallback);
+}
+
+function mutationObjectCallback(mutationRecordsList) {	
+	stickyFooter();
+};
+	 
 
 //check for resize event
 window.onresize = function() {
@@ -57,7 +75,9 @@ function getCSS(element, property) {
 }
 
 function stickyFooter() {
-	observer.disconnect();
+	if (MutationObserver) {
+		observer.disconnect();
+	}
 	document.body.setAttribute("style","height:auto");
 			
 	if (document.getElementsByTagName("footer")[0].getAttribute("style") != null) {
@@ -83,7 +103,9 @@ function stickyFooter() {
 	document.body.setAttribute("style","height:100%");
 	
 	//reconnect
-	observer.observe(target, config);
+	if (MutationObserver) {
+		observer.observe(target, config);
+	}
 }
 
 /*
