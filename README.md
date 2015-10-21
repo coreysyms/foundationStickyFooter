@@ -52,3 +52,10 @@ A: It works great! and its easy to install too, no more Zepto!
 <b>HELPERS:<b>
 
 Please DO NOT apply any classes to the footer IE < footer class="row" > If you would like your row content to respect the grid plase place the row and column(s) inside the < footer > tag. The stickyFooter will not work proprly if you class it with foundation's grid classes.
+
+If you would like your footer to be 'hidden' before the sticky footer 'sticks' the footer at the bottom apply an inline style on your footer tag.
+```
+ <footer style="visibility:hidden;">
+ ... your footer code ...
+ </footer>
+ ```
