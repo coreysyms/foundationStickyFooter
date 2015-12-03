@@ -9,10 +9,14 @@ You don't even need a fixed height, or a wrapper!
 
 It even works in mobile and tablet! Go on, check out the demo! http://tangerineindustries.com/download/sticky_footer/index.html
 
-<b>NOW COMPLETELY WORKS IN FOUNDATION 5 AND NEW DOM CHANGE EVENT LISTENERS! Also, my example uses an old instal of Foundation, but it does work in Foundation 5, I just couldn't figure out how to regigger my git files to reflect Foundations new file structure.</b>
+<b>NEW DOM CHANGE EVENT LISTENERS! Also, my example uses an old instal of Foundation, but it does work in Foundation 5, I just couldn't figure out how to regigger my git files to reflect Foundations new file structure.</b>
 
 FAQ's as they come up.
 =====================
+Q: Will it work with Foundation 6?
+
+A: Yes, all testing so far has shown that sickyfooter plays will with Foundation 6
+
 Q: Do I need to apply 100% height to my body?
 
 A: This has been changed from don't to does not matter. New sticky footer will still work with height 100%
