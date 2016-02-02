@@ -1,5 +1,5 @@
 /*!
- * jQuery Sticky Footer 2.1
+ * jQuery Sticky Footer 2.2
  * Corey Snyder
  * http://tangerineindustries.com
  *
@@ -13,6 +13,9 @@
  * Modification for Foundation 5 auto height issues
  * Modification for new DOM change event listener
  * Modification for old IE mutation events, since not supported uses polling
+ * 
+ * Feb 2, 2016
+ * Modification for HTML multiple <footer> tag syntax, SF should only grabbing the last <footer> on the page
  */
 
 var MutationObserver = (function () {
@@ -79,9 +82,12 @@ function stickyFooter() {
 		observer.disconnect();
 	}
 	document.body.setAttribute("style","height:auto");
+	
+	//only get the last footer
+	var footer = document.getElementsByTagName("footer")[document.getElementsByTagName("footer").length-1];
 			
-	if (document.getElementsByTagName("footer")[0].getAttribute("style") != null) {
-		document.getElementsByTagName("footer")[0].removeAttribute("style");
+	if (footer.getAttribute("style") != null) {
+		footer.removeAttribute("style");
 	}
 	
 	if (window.innerHeight != document.body.offsetHeight) {
@@ -89,14 +95,14 @@ function stickyFooter() {
 		var current = getCSS("footer", "margin-top");
 		
 		if (isNaN(current) == true) {
-			document.getElementsByTagName("footer")[0].setAttribute("style","margin-top:0px;");
+			footer.setAttribute("style","margin-top:0px;");
 			current = 0;
 		} else {
 			current = parseInt(current);
 		}
 						
 		if (current+offset > parseInt(getCSS("footer", "margin-top"))) {			
-			document.getElementsByTagName("footer")[0].setAttribute("style","margin-top:"+(current+offset)+"px;");
+			footer.setAttribute("style","margin-top:"+(current+offset)+"px;");
 		}
 	}
 	
@@ -111,4 +117,3 @@ function stickyFooter() {
 /*
 ! end sticky footer
 */
-
