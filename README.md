@@ -17,6 +17,10 @@ Q: Will it work with Foundation 6?
 
 A: Yes, all testing so far has shown that sickyfooter plays will with Foundation 6
 
+Q: What about HTML 5 allowing for multiple footer tags? 
+
+A: Sticky Footer will only stick the last < footer > on your page.
+
 Q: Do I need to apply 100% height to my body?
 
 A: This has been changed from don't to does not matter. New sticky footer will still work with height 100%
