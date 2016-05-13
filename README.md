@@ -44,7 +44,7 @@ footer { background-color:red; margin-top:100px }
       <p>I am the left side</p>
     </div>
     <div class="columns medium-6">
-      <p>I am the right side</p<
+      <p>I am the right side</p>
     </div>
   </div>
 </footer>
