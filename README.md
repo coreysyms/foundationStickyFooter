@@ -31,6 +31,26 @@ A: If you would like to have your footer span the full width of the browser, app
 footer { background-color:red; } 
 This will give you a full width bar with a background color of red.
 
+A more robust example being a 2 column grid respecting footer with a full width bg red and a margin top of 100px when the footer is longer than the height of the page.
+
+```
+*app.css*
+footer { background-color:red; margin-top:100px }
+
+*html*
+<footer>
+  <div class="row">
+    <div class="columns medium-6">
+      <p>I am the left side</p>
+    </div>
+    <div class="columns medium-6">
+      <p>I am the right side</p<
+    </div>
+  </div>
+</footer>
+```
+
+
 Q: Will this work with out Foundation?
 
 A: Yes! This sticky footer will work with out Foundation. I build it with Foundation in mind cause that is what I use.
