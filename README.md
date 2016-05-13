@@ -12,9 +12,6 @@ It even works in mobile and tablet! Go on, check out the demo!
 
 FAQ's as they come up.
 =====================
-Q: Will it work with Foundation 6?
-
-A: Yes, all testing so far has shown that sickyfooter plays will with Foundation 6
 
 Q: What about HTML 5 allowing for multiple footer tags? 
 
@@ -54,26 +51,6 @@ Q: Will this work with out Foundation?
 
 A: Yes! This sticky footer will work with out Foundation. I build it with Foundation in mind cause that is what I use.
 
-Q: How do I install this for Foundation 4?
-
-A: Your scripts should load like this, as you can see I moved the location of the stickyfooter.js file to the js/vendor/ directory to reflect the location of the "helper" script... see... ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') how this script is looking for any jquery files in js/vendor.
-```
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/foundation.min.js"></script>
-  <script src="js/vendor/stickyFooter.js"></script>
-```
-  
-Your file locations may be a little different so make you paths reflect that.
-
-Q: What about Foundation 5? 
-
-A: It works great! and its easy to install too, no more Zepto!
 
 
 <b>HELPERS:</b>
