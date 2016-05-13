@@ -1,4 +1,4 @@
-foundationStickyFooter For Foundation 3 and up
+foundationStickyFooter For Foundation
 ======================
 The Sticky footer will use the HTML5 tag < footer > and make it "stick" to the bottom of the page.
 Simply add in < footer ></ footer > to your webpage with your desired styled content inside the < footer > tag.
@@ -9,7 +9,6 @@ You don't even need a fixed height, or a wrapper!
 
 It even works in mobile and tablet! Go on, check out the demo!
 
-<b>NEW DOM CHANGE EVENT LISTENERS! Also, my example uses an old instal of Foundation, but it does work in Foundation 5, I just couldn't figure out how to regigger my git files to reflect Foundations new file structure.</b>
 
 FAQ's as they come up.
 =====================
