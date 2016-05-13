@@ -94,7 +94,7 @@ function stickyFooter() {
 		var offset = window.innerHeight - document.body.offsetHeight;
 		var current = getCSS("footer", "margin-top");
 		
-		if (isNaN(current) == true) {
+		if (isNaN(parseInt(current)) == true) {
 			footer.setAttribute("style","margin-top:0px;");
 			current = 0;
 		} else {
