@@ -13,15 +13,15 @@ It even works in mobile and tablet!
 FAQ's as they come up.
 =====================
 
-Q: What about HTML 5 allowing for multiple footer tags? 
+<b>Q: What about HTML 5 allowing for multiple footer tags? </b>
 
 A: Sticky Footer will only stick the last < footer > on your page.
 
-Q: Do I need to apply 100% height to my body?
+<b>Q: Do I need to apply 100% height to my body?</b>
 
 A: This has been changed from don't to does not matter. New sticky footer will still work with height 100%
 
-Q: How do I span the full width of the browser with my footer in Foundation?
+<b>Q: How do I span the full width of the browser with my footer in Foundation?</b>
 
 A: If you would like to have your footer span the full width of the browser, apply a style to the footer.
 footer { background-color:red; } 
@@ -47,7 +47,7 @@ footer { background-color:red; margin-top:100px }
 ```
 
 
-Q: Will this work with out Foundation?
+<b>Q: Will this work with out Foundation?</b>
 
 A: Yes! This sticky footer will work with out Foundation. I build it with Foundation in mind cause that is what I use.
 
