@@ -1,5 +1,5 @@
 /*!
- * jQuery Sticky Footer 2.2
+ * jQuery Sticky Footer 2.3
  * Corey Snyder
  * http://tangerineindustries.com
  *
@@ -14,12 +14,12 @@
  * Modification for new DOM change event listener
  * Modification for old IE mutation events, since not supported uses polling
  * 
- * Feb 2, 2016
+ * March 13, 2017
  * Modification for HTML multiple <footer> tag syntax, SF should only grabbing the last <footer> on the page
  */
 
 var MutationObserver = (function () {
-	var prefixes = ['WebKit', 'Moz', 'O', 'Ms', '']
+	var prefixes = ['WebKit', 'Moz', 'O', 'Ms', ''];
 		for (var i=0; i < prefixes.length; i++) {
 			if (prefixes[i] + 'MutationObserver' in window) {
 				 return window[prefixes[i] + 'MutationObserver'];
@@ -51,13 +51,13 @@ if (MutationObserver) {
 
 function mutationObjectCallback(mutationRecordsList) {	
 	stickyFooter();
-};
+}
 	 
 
 //check for resize event
 window.onresize = function() {
 	stickyFooter();
-}
+};
 
 //lets get the marginTop for the <footer>
 function getCSS(element, property) {
@@ -86,7 +86,7 @@ function stickyFooter() {
 	//only get the last footer
 	var footer = document.getElementsByTagName("footer")[document.getElementsByTagName("footer").length-1];
 			
-	if (footer.getAttribute("style") != null) {
+	if (footer.getAttribute("style") !== null) {
 		footer.removeAttribute("style");
 	}
 	
@@ -94,7 +94,7 @@ function stickyFooter() {
 		var offset = window.innerHeight - document.body.offsetHeight;
 		var current = getCSS("footer", "margin-top");
 		
-		if (isNaN(parseInt(current)) == true) {
+		if (isNaN(parseInt(current)) === true) {
 			footer.setAttribute("style","margin-top:0px;");
 			current = 0;
 		} else {
